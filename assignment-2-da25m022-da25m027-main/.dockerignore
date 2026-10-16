@@ -1,0 +1,9 @@
+__pycache__/
+output/
+.git/
+*.pdf
+.env
+.gitignore
+*.pyc
+venv/
+todo.md

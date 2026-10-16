@@ -1,0 +1,29 @@
+# Project Metadata
+project_name: "Application Monitoring"
+author: "Pranav Rao"
+
+# Data Paths
+data:
+  sample: "data/sample"
+
+# Model
+model:
+  name: "nlpconnect/vit-gpt2-image-captioning"
+
+# Deployment Settings
+monitoring:
+  port:
+    model: 8000  # model logging
+    streamlit: 8501  # streamlit UI
+    node: 9100  # node
+    alert: 5001  # to send alert mails
+    alertmanager: 9093  # To manager alerts and set silence
+    prometheus: 9090  # overview of prometheus
+    grafana: 3000 # grafana dashboard
+  log: "prog_log.log"
+  current_version: "v2"
+
+mail_alerts:
+  sender_mail: "hello@demomailtrap.co"
+  receiver_mail: "da25m022@smail.iitm.ac.in"
+  api: ${MAIL_API}  # from the .env file

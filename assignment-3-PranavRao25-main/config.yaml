@@ -1,0 +1,11 @@
+# Project Metadata
+project_name: "ReproducibleCattleBiometricsPipeline"
+author: "Pranav Rao"
+
+# Data Paths
+data:
+  raw_path: "data/raw/"
+  processed_dir: "data/processed"
+  production: "data/production"
+  current_version: "v1"
+  features:

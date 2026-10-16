@@ -1,0 +1,10 @@
+flask
+soundfile
+pyt2s
+spacy
+deep_translator == 1.11.4
+requests
+pyyaml
+pandas
+dotenv
+pillow

@@ -1,0 +1,31 @@
+# Project Metadata
+project_name: ""
+authors:
+  DA25M022: "Pranav Rao"
+  DA25M027: "Sanved"
+
+deployment:
+  port: 5290
+  log: "deployment_log.csv"
+  current_version: "v1"
+
+features:
+  tts:
+    author: "Pranav Rao"
+    version: "v1"
+    endpoint: "/tts"
+    path: "output/tts.mp3"
+  translate:
+    author: 'Sanved'
+    version: 'v1'
+    endpoint: 'translate'
+  ner:
+    author: "Pranav Rao"
+    version: "v1"
+    endpoint: "/ner"
+    path: "output/ner.html"
+  generate_img:
+    author: 'Sanved'
+    api_key: ${HF_TOKEN}
+    endpoint: "generate_img"
+    path: "output/"

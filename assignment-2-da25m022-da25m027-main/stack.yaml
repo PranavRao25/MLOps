@@ -1,0 +1,39 @@
+version: '3.9'
+
+services:
+  api_service:
+    image: ""
+    
+    environment:
+    volumes:
+
+    ports:
+    - target: 5000
+      published: 5000
+      protocol: tcp
+      mode: ingress
+
+    configs:
+    - source: ""
+      target:
+      mode:
+
+    deploy:
+      replicas: 4
+      update_configs:
+        parallelism: 1
+        delay: 5s
+        order: start-first
+      restart_policy:
+        condition: on-failure
+  
+  networks:
+    - app_overlay
+
+networks:
+  app_overlay:
+    driver: overlay
+
+configs:
+
+volumes:

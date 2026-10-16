@@ -1,0 +1,4 @@
+master: ray start --head --port=6379 --dashboard-host=0.0.0.0
+worker: ray start --adress="<master_ip>:6379"clean_spark: python3 ./src/spark/main.py
+join_spark: python3 ./src/spark/join_main.py
+spark: ./spark.sh

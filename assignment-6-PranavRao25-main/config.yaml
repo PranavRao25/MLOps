@@ -1,0 +1,19 @@
+project: "Orchestrated Web Scraper Pipeline"
+author: "Pranav Rao"
+version: "v1"
+
+default_args:
+  owner: "orchaestrator"
+  depends_on_past: False
+  email_on_failure: True
+  email_on_retry: False
+  retries: 3
+  retry_delay: 2
+  retry_exponential_backoff: True
+
+mail:
+  receiver_mail: ${EMAIL}
+  password: ${PASSWORD}
+
+ports:
+  airflow: 8080

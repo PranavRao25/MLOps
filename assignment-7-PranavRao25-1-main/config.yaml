@@ -1,0 +1,43 @@
+project: "MLFlow Sprint"
+author: "Pranav Rao"
+version: "v2"
+
+data:
+  len: 500
+  size: 128
+  split:
+    train: 0.75
+    valid: 0.15
+    test: 0.10
+  raw: "data/raw"
+  processed: "data/processed"
+  production: "data/production"
+  version: "v2"
+  mnist:
+    folder: "data/production/mnist"
+    size: 28
+  cats_dogs:
+    folder: "data/production/cats_dogs"
+    annotations: "data/production/cats_dogs/annotations.csv"
+
+model:
+  version: "v3"
+  name: "ResNet50"
+  path: "model/v3/resnet50_v3_best.pt"
+  total_classes: 12
+  hyperparams:
+    lr: 1e-3
+    epochs: 10
+    wgt_decay: 1e-2
+  output: output/v3
+
+mail:
+  sender_mail: ${EMAIL}
+  receiver_mail: ${EMAIL}
+  password: ${PASSWORD}
+
+port:
+  app: 8501 # Streamlit
+  mlflow: 5000
+  mail: 5002
+  serve: 5001

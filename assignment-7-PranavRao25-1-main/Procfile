@@ -1,0 +1,3 @@
+ui: mlflow server --backend-store-uri sqlite:///./mlflow.db --default-artifact-root ./model --host 0.0.0.0 --port 5000
+serve: mlflow models serve -m "runs:/2f03caa839b14b4aa40fa222dbff88c6/model" -p 5001 --env-manager local
+app: streamlit run src/app.py
